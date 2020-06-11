@@ -1,0 +1,15 @@
+server:
+  port: 1000
+
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      config:
+        # 配置中心地址 bootstrap.yml比application.yml先启动，所以可以先配置在这里配置一些基础信息，配置好配置中心地址，其他涉及敏感的配置比如数据库配置，放在application.yml中，然后放到配置中心去，这就是使用配置中心的作用
+        server-addr: 127.0.0.1:8848
+        # 指定读取nacos上配置文件的格式 读取格式都是${spring.application.name}-${spring.profile.active}.${file-extension}
+        file-extension: yml
+        # 指定读取nacos配置中心上Data ID
+        # prefix: example

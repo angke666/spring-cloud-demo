@@ -9,6 +9,7 @@
     <version>1.0.0</version>
     <modules>
         <module>spring-cloud-demo-nacos-sample</module>
+        <module>spring-cloud-demo-nacos-config</module>
     </modules>
     <packaging>pom</packaging>
 
