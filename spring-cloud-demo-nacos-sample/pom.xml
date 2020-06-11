@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>spring-cloud-demo</artifactId>
+        <groupId>com.qianjin</groupId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>spring-cloud-demo-nacos-sample</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <name>${project.artifactId}</name>
+    <description>nacos注册发现</description>
+
+    <properties>
+        <nacos.sample.api.version>1.0.0</nacos.sample.api.version>
+    </properties>
+
+    <modules>
+        <module>spring-cloud-demo-nacos-sample-api</module>
+        <module>spring-cloud-demo-nacos-sample-consumer</module>
+        <module>spring-cloud-demo-nacos-sample-service</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.qianjin</groupId>
+                <artifactId>spring-cloud-demo-nacos-sample-api</artifactId>
+                <version>${nacos.sample.api.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

@@ -1,0 +1,16 @@
+server:
+  port: 1002
+
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+dubbo:
+  cloud:
+    subscribed-services: nacos-provider
+  scan:
+    base-packages: com.qianjin.consumer
