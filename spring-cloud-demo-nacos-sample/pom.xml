@@ -16,10 +16,6 @@
     <name>${project.artifactId}</name>
     <description>nacos注册发现</description>
 
-    <properties>
-        <nacos.sample.api.version>1.0.0</nacos.sample.api.version>
-    </properties>
-
     <modules>
         <module>spring-cloud-demo-nacos-sample-api</module>
         <module>spring-cloud-demo-nacos-sample-consumer</module>
@@ -39,7 +35,7 @@
             <dependency>
                 <groupId>com.qianjin</groupId>
                 <artifactId>spring-cloud-demo-nacos-sample-api</artifactId>
-                <version>${nacos.sample.api.version}</version>
+                <version>${demo.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

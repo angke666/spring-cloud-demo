@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>spring-cloud-demo-nacos-sample-api</artifactId>
-    <version>1.0.0</version>
+    <version>${demo.version}</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>

@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 2020/6/11 10:52
  * @Version 1.0
  **/
+@DubboComponentScan
 @SpringBootApplication
 public class SpringCloudDemoNacosSampleService {
 

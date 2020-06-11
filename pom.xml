@@ -9,11 +9,12 @@
     <version>1.0.0</version>
     <modules>
         <module>spring-cloud-demo-nacos-sample</module>
-        <module>spring-cloud-demo-nacos-sample/spring-cloud-demo-nacos-sample-api</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
+        <demo.version>1.0.0</demo.version>
+
         <java.version>1.8</java.version>
         <maven.plugin.version>3.8.1</maven.plugin.version>
 
@@ -60,13 +61,6 @@
                     <configuration>
                         <finalName>${project.build.finalName}</finalName>
                     </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>repackage</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>

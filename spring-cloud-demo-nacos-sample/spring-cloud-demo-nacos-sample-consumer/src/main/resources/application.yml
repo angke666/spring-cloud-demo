@@ -12,5 +12,3 @@ spring:
 dubbo:
   cloud:
     subscribed-services: nacos-provider
-  scan:
-    base-packages: com.qianjin.consumer
