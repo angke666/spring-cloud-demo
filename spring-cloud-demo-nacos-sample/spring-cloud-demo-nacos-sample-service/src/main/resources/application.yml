@@ -9,6 +9,7 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
 
+# dubbo服务注册中心的配置地址，表示挂载到Spring Cloud注册中心
 dubbo:
   registry:
     address: spring-cloud://localhost
