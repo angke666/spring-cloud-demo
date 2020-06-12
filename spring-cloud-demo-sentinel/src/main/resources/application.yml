@@ -8,3 +8,12 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8080
+      # sentinel dashboard上面配置流控规则都是保存在内存中，项目重启这些规则都会清除，所以可以把流控规则配置在数据源上面（比如nacos）
+      datasource:
+        # sentinel支持Consul、ZooKeeper、Redis、Nacos、Apollo等数据源
+        - nacos:
+            server-addr: localhost:8848
+            data-id: ${spring.application.name}-sentinel
+            group-id: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow

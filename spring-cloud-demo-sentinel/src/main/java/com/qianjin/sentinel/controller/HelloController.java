@@ -18,4 +18,9 @@ public class HelloController {
         return "Hello Dash";
     }
 
+    @GetMapping("/dynamic")
+    public String dynamic() {
+        return "Hello Dynamic";
+    }
+
 }
