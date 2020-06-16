@@ -1,0 +1,41 @@
+server:
+  port: 1003
+
+spring:
+  application:
+    name: repo-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yml
+    alibaba:
+      seata:
+        tx-service-group: repo-service
+  profiles:
+    active: dev
+
+# dubbo服务注册中心的配置地址，表示挂载到Spring Cloud注册中心
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  protocol:
+    name: dubbo
+    port: 20882
+
+# seata配置
+#seata:
+#  # 表示指定服务所属的事务分组，如果没有指定，默认使用spring.application.name加上-seata-service-group
+#  tx-service-group: repo-service
+#  service:
+#    # TC服务列表，也就是seata服务端地址，只有当注册中心为file时使用
+#    grouplist: 127.0.0.1:8091
+#    vgroup-mapping: default
+#    # 全局事务开关
+#    disable-global-transaction: false
+#  client:
+#    undo:
+#      # 记录每个数据库表操作的回滚日志，出异常从时候会根据这个日志进行回滚，默认表名就是undo_log
+#      log-table: undo_log

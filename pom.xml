@@ -11,6 +11,7 @@
         <module>spring-cloud-demo-nacos-sample</module>
         <module>spring-cloud-demo-nacos-config</module>
         <module>spring-cloud-demo-sentinel</module>
+        <module>spring-cloud-demo-seata</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -23,6 +24,10 @@
         <spring.boot.version>2.1.11.RELEASE</spring.boot.version>
         <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
         <spring.cloud.alibaba.version>2.1.1.RELEASE</spring.cloud.alibaba.version>
+
+        <mybatis.plus.version>3.3.1</mybatis.plus.version>
+        <mysql.version>8.0.20</mysql.version>
+        <hutool.version>5.3.5</hutool.version>
     </properties>
 
     <dependencies>
