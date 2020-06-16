@@ -27,6 +27,12 @@ public class RestOrderSeviceImpl implements IRestOrderService {
     @Reference
     private IOrderService orderService;
 
+    /**
+     * 这是AT模式，使用最简单，TCC模式性能高于AT模式，实现稍微复杂点 https://blog.csdn.net/hosaos/article/details/89847554
+     * @param orderRequest
+     * @return
+     * @throws Exception
+     */
     @Override
     @GlobalTransactional(timeoutMills = 300000, name = "rest-web")
     public R handlerBusiness(Order orderRequest) throws Exception {
