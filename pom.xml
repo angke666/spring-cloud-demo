@@ -12,6 +12,7 @@
         <module>spring-cloud-demo-nacos-config</module>
         <module>spring-cloud-demo-sentinel</module>
         <module>spring-cloud-demo-seata</module>
+        <module>spring-cloud-demo-gateway</module>
     </modules>
     <packaging>pom</packaging>
 
