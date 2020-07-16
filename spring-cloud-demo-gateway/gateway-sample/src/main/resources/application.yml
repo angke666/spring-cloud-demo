@@ -5,11 +5,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: gateway-service
+        - id: gateway-service #每个规则的标识而已
           predicates:
-            - Path=/gateway/** #路径匹配
+            - Path=/gateway/** #路径匹配 （访问gateway-service服务的controller为例子， http://localhost:1001/gateway/say）
           filters:
-            - StripPrefix=1 #跳过前缀
+            - StripPrefix=1 #跳过前缀 （如果设置了跳过前缀，上面的访问地址就应该换成这样 http://localhost:1001/say）
           uri: lb://gateway-service #gateway-service的访问地址 lb://${spring.application.name}表示从注册中心获取地址，也支持普通URI
     nacos:
       discovery:
