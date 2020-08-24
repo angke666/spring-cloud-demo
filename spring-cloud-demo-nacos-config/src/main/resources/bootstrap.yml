@@ -11,5 +11,5 @@ spring:
         server-addr: 127.0.0.1:8848
         # 指定读取nacos上配置文件的格式 读取格式都是${spring.application.name}-${spring.profile.active}.${file-extension}
         file-extension: yml
-        # 指定读取nacos配置中心上Data ID
+        # 指定读取nacos配置中心上Data ID（默认是spring.application.name的值）
         # prefix: example
